@@ -24,20 +24,22 @@ for($page = 900001;$page <= 999856; $page++)
 			$rollno 		=	$browser->find("//*[@id='item']/table[2]/tbody/tr[1]/td[2]",0)->plaintext;
 			$name 			=	$browser->find("//*[@id='item']/table[2]/tbody/tr[3]/td[2]",0)->plaintext;
 			$fname			=	$browser->find("//*[@id='item']/table[2]/tbody/tr[4]/td[2]",0)->plaintext;
-			$result			=	$browser->find("//*[@id='item']/table[2]/tbody/tr[5]/td[2]",0)->plaintext;
-			$remarks		=	$browser->find("//*[@id='item']/table[2]/tbody/tr[6]/td[2]",0)->plaintext;
-      
+			$inst			=	$browser->find("//*[@id='item']/table[2]/tbody/tr[5]/td[2]",0)->plaintext;
+			$result			=	$browser->find("//*[@id="item"]/table[2]/tbody/tr[6]/td[2]",0)->plaintext;
+			$remarks		=	$browser->find("//*[@id='item']/table[2]/tbody/tr[7]/td[2]",0)->plaintext;
+      				
       
       $record = array( 'rollno' =>$rollno, 
 		   'nameofresult' => $nameofresult,
 		   'name' => $name, 
 		   'fname' => $fname, 
-		   'result' => $result, 
+		   'inst' => $inst,
+		     'result' => $result, 
 		   'remarks' => $remarks, 
 		    'link' => $link);
 						
 						
-           scraperwiki::save(array('rollno','nameofresult','name','fname','result','remarks','link'), $record);
+           scraperwiki::save(array('rollno','nameofresult','name','fname','inst','result','remarks','link'), $record);
 				
       
 		}
