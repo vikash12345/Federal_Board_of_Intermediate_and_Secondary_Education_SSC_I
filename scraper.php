@@ -25,7 +25,7 @@ for($page = 900001;$page <= 999856; $page++)
 			$name 			=	$browser->find("//*[@id='item']/table[2]/tbody/tr[3]/td[2]",0)->plaintext;
 			$fname			=	$browser->find("//*[@id='item']/table[2]/tbody/tr[4]/td[2]",0)->plaintext;
 			$inst			=	$browser->find("//*[@id='item']/table[2]/tbody/tr[5]/td[2]",0)->plaintext;
-			$result			=	$browser->find("//*[@id="item"]/table[2]/tbody/tr[6]/td[2]",0)->plaintext;
+			$result			=	$browser->find("//*[@id='item']/table[2]/tbody/tr[6]/td[2]",0)->plaintext;
 			$remarks		=	$browser->find("//*[@id='item']/table[2]/tbody/tr[7]/td[2]",0)->plaintext;
       				
       
